@@ -8,6 +8,7 @@ public class spawn : MonoBehaviour
     public Rigidbody rigidbody;
     public Vector3 center;
     public Vector3 size;
+    public AudioClip Clip;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,12 +28,15 @@ public class spawn : MonoBehaviour
         sp.AddComponent<move1>();
         sp.AddComponent<Rigidbody>();
         sp.AddComponent<BoxCollider>();
+        sp.AddComponent<AudioSource>();
+        AudioSource audio = sp.GetComponent<AudioSource>();
+        audio.clip = Clip;
         sp.AddComponent<notCrossing>();
         rigidbody = sp.GetComponent<Rigidbody>();
         rigidbody.useGravity = false;
 
         sp.transform.Rotate(0, Random.Range(0, 360), 0, Space.World);
-        sp.transform.localScale = new Vector3(0.05f, 0.05f, 0.05f);
+        sp.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
 
 
     }

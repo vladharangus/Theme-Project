@@ -5,10 +5,11 @@ using UnityEngine;
 public class moveCamera : MonoBehaviour
 {
     int speed = 30;
+    AudioSource source;
     // Start is called before the first frame update
     void Start()
     {
-        
+        source = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -16,32 +17,29 @@ public class moveCamera : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
-            Vector3 position = this.transform.position;
-            position.x+=15;
-            this.transform.position = position;
+            source.Play();
+            transform.Translate(new Vector3(-3*speed * Time.deltaTime, 0, 0));
         }
         if (Input.GetKeyDown(KeyCode.RightArrow))
         {
-            Vector3 position = this.transform.position;
-            position.x -= 15;
-            this.transform.position = position;
+            source.Play();
+            transform.Translate(new Vector3(3*speed * Time.deltaTime, 0, 0));
         }
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
-            Vector3 position = this.transform.position;
-            position.z-=15 ;
-            this.transform.position = position;
+            source.Play();
+            transform.Translate(new Vector3(0, 0,3*speed * Time.deltaTime));
         }
         if (Input.GetKeyDown(KeyCode.DownArrow))
         {
-            Vector3 position = this.transform.position;
-            position.z+=15;
-            this.transform.position = position;
+            source.Play();
+            transform.Translate(new Vector3(0, 0, -3*speed * Time.deltaTime));
+
         }
         if (Input.GetKey(KeyCode.A))
-            transform.Rotate(Vector3.up * speed * Time.deltaTime);
+            transform.Rotate(-Vector3.up * speed * Time.deltaTime);
 
         if (Input.GetKey(KeyCode.D))
-            transform.Rotate(-Vector3.up * speed * Time.deltaTime);
+            transform.Rotate(Vector3.up * speed * Time.deltaTime);
     }
 }
