@@ -15,7 +15,7 @@ public class notCrossing : MonoBehaviour
     void OnCollisionEnter(Collision col)
     {
         if (col.collider.CompareTag("Boundary"))
-            rb.AddForce(col.contacts[0].normal * force, ForceMode.Impulse);
+            rb.AddForce(0, 0, 0);
     }
 
 

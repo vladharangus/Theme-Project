@@ -5,6 +5,7 @@ using UnityEngine;
 public class spawn : MonoBehaviour
 {
     public GameObject Foodprefab;
+    public Rigidbody rigidbody;
     public Vector3 center;
     public Vector3 size;
     // Start is called before the first frame update
@@ -27,7 +28,11 @@ public class spawn : MonoBehaviour
         sp.AddComponent<Rigidbody>();
         sp.AddComponent<BoxCollider>();
         sp.AddComponent<notCrossing>();
+        rigidbody = sp.GetComponent<Rigidbody>();
+        rigidbody.useGravity = false;
+
         sp.transform.Rotate(0, Random.Range(0, 360), 0, Space.World);
+        sp.transform.localScale = new Vector3(0.05f, 0.05f, 0.05f);
 
 
     }
