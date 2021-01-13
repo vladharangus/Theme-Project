@@ -54,13 +54,14 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Assets\notCrossing.cs" />
+    <Compile Include="Assets\spawn2.cs" />
     <Compile Include="Assets\moveCamera.cs" />
     <Compile Include="Assets\move1.cs" />
     <Compile Include="Assets\spawn.cs" />
-    <Compile Include="Assets\spawn2.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\PB_Spider\readme.txt" />
+     <None Include="Assets\Chair\Read Me.txt" />
     <Reference Include="UnityEngine">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.12f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>
