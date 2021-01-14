@@ -46,7 +46,28 @@
     <ImplicitlyExpandNETStandardFacades>false</ImplicitlyExpandNETStandardFacades>
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
+<<<<<<< HEAD
   <ItemGroup>
+=======
+  <PropertyGroup>
+    <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <UnityProjectGenerator>Package</UnityProjectGenerator>
+    <UnityProjectGeneratorVersion>2.0.3</UnityProjectGeneratorVersion>
+    <UnityProjectType>Game:1</UnityProjectType>
+    <UnityBuildTarget>StandaloneWindows:5</UnityBuildTarget>
+    <UnityVersion>2020.1.12f1</UnityVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Assets\notCrossing.cs" />
+    <Compile Include="Assets\spawn2.cs" />
+    <Compile Include="Assets\moveCamera.cs" />
+    <Compile Include="Assets\move1.cs" />
+    <Compile Include="Assets\spawn.cs" />
+  </ItemGroup>
+  <ItemGroup>
+     <None Include="Assets\PB_Spider\readme.txt" />
+     <None Include="Assets\Chair\Read Me.txt" />
+>>>>>>> f8dc5e8522b02bc1a5d92c041ccce600138a1857
     <Reference Include="UnityEngine">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.12f1\Editor\Data\Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
